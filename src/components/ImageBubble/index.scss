@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the image bubble component.
+// -----------------------------------------------------------------------------
+
+.image-bubble {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	overflow: hidden;
+	width: 30rem;
+	height: 30rem;
+	border: 1rem solid var(--black);
+	border-radius: 50%;
+	background-color: var(--baby-blue);
+	background: linear-gradient(-45deg, var(--baby-blue), #ffffff, var(--baby-blue), #ffffff);
+  	background-size: 400% 400%;
+  	animation: gradient 15s ease infinite;
+
+	&__portrait {
+		width: 25rem;
+		transform: translateY(50rem);
+		transition: 1.5s ease;
+
+		&.slide-up {
+			transform: translateY(0);
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 50rem;
+		height: 50rem;
+
+		&__portrait {
+			width: 45rem;
+		}
+	}
+}

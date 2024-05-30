@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the buttons of the site/appliaction.
+// -----------------------------------------------------------------------------
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: .1rem solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+
+  &__primary {
+    padding: 1rem 3rem;
+    border: .1rem solid var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: var(--black);
+      background-color: var(--white);
+    }
+  }
+
+  // Hamburger
+  &--hamburger-icon {
+    cursor: pointer;
+    background-color: transparent;
+
+    & > div {
+      display: block;
+      width: 3.2rem;
+      height: .2rem;
+      margin: .6rem 0;
+      background-color: var(--white);
+      transition: 0.4s;
+    }
+  }
+
+  &--hamburger-icon[aria-expanded='true'] {
+
+    .bar1 {
+      transform: rotate(-45deg) translate(-.4rem, .7rem);
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      transform: rotate(45deg) translate(-.4rem, -.7rem);
+    }
+  }
+}
+

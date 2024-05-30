@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about page.
+// -----------------------------------------------------------------------------
+
+.page__about {
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+	gap: 2rem;
+	display: flex;
+  padding-bottom: 5rem;
+  padding-right: 4rem;
+
+	&__info {
+    flex-direction: column;
+    gap: 1.5rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+		
+		img {
+			width: 100%;
+			max-width: 20rem;
+			height: auto;
+		}
+
+    &__job {
+      flex-direction: column;
+      display: flex;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: .2rem solid var(--white);
+
+      &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1rem;
+      }
+
+      &__desc {
+        padding: 2rem;
+      }
+    }
+	}
+
+  @media screen and (min-width: 991px) {
+
+    &__job {
+      flex-direction: row;
+    }
+  }
+}

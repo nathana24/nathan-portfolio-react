@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the home page.
+// -----------------------------------------------------------------------------
+
+.page__home {
+	display: flex;
+	align-items: center;
+	flex-direction: column-reverse;
+
+	&__text {
+		flex: 1;
+		width: 100%;
+
+		h1 {
+			max-width: 50rem;
+			font-size: 4.5rem;
+			color: var(--white);
+
+			img {
+        width: 5rem;
+				margin-left: 2rem;
+				margin-right: .5rem
+			}
+		}
+	}
+
+	&__blob {
+		align-items: center;
+		flex: 1;
+		justify-content: center;
+		display: flex;
+		width: 100%;
+	}
+
+	&__contact-me {
+		margin-top: 1.5rem;
+	}
+
+	@media screen and (min-width: 991px) {
+		flex-direction: row;
+
+    h1 {
+      font-size: 7.5rem;
+
+      img {
+      	width: 6rem;
+      }
+    }
+
+		&__text {
+			width: 50%;
+		}
+
+    &__blob {
+      width: 50%;
+    }
+	}
+}
+
+

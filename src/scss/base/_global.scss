@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the global site/appliaction.
+// -----------------------------------------------------------------------------
+
+.visually-hidden {	
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+
+  // Fix for positioned table caption that could become anonymous cells
+  &:not(caption) {
+    position: absolute;
+  }
+}

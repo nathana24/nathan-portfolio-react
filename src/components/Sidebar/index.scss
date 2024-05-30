@@ -1,0 +1,193 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Sidebar component.
+// -----------------------------------------------------------------------------
+
+.navigation__sidebar {
+	align-items: flex-start;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	display: block;
+	flex-direction: column;
+	align-content: center;
+	justify-content: flex-start;
+	width: 100%;
+	min-height: 5rem;
+	overflow: auto;
+
+	&.active {
+
+		display: flex;
+		height: 100%;
+
+		.navigation__sidebar__logo {
+			background-color: var(--baby-blue);
+		}
+
+		.navigation__sidebar__drawer {
+			justify-content: space-between;
+			flex-direction: column;
+			display: flex;
+		}
+
+		.navigation__sidebar__socials ul {
+			align-items: flex-start;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
+	&__logo {
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+		padding: 1rem;
+		width: 100%;
+
+		.svg-inline--fa {
+			font-size: 2r em;
+			color: var(--black);
+		}
+
+		.icon__logo {
+			fill: var(--white);
+		}
+
+		img {
+			width: 100%;
+			max-width: 5rem;
+		}
+	}
+
+	&__drawer {
+		display: none;
+		width: 100%;
+		height: 100%;
+		background: var(--baby-blue);
+	}
+
+	&__nav {
+		margin-top: 2rem;
+
+		ul {
+			flex-direction: column;
+			gap: 2rem;
+			display: flex;
+			margin: 0;
+			margin-top: 2rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			list-style: none;
+			text-align: center;
+
+			p {
+				margin-top: .5rem;
+				text-transform: uppercase;
+				font-size: 1.6rem;
+			}
+
+			a {
+        gap: 1rem;
+        flex-direction: row;
+				display: flex;
+				color: var(--white);
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+
+					svg,
+					p {
+						color: var(--black);
+					}
+				}
+
+				&.active {
+					color: var(--black);
+				}
+			}
+
+			svg {
+				font-size: 2.5rem;
+				fill: var(--white);
+			}
+		}
+	}
+
+	&__socials {
+		margin-top: auto;
+		margin-bottom: 2rem;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			padding-left: 0;
+			list-style-type: none;
+			text-align: center;
+		}
+
+		svg {
+			font-size: 2.5rem;
+			color: var(--white);
+
+			path {
+				fill: currentColor;
+			}
+
+			&:hover,
+			&:focus {
+				path {
+					fill: var(--black);
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 991px) {
+		position: fixed;
+		align-items: center;
+		display: flex;
+		width: 8rem;
+		height: 100%;
+
+		&__logo {
+			justify-content: center;
+			background: var(--baby-blue);
+
+			.button--hamburger-icon {
+				display: none;
+			}
+		}
+
+		&__drawer {
+			flex-direction: column;
+			display: flex;
+		}
+
+		&__socials {
+
+			ul {
+				justify-content: center;
+			}
+		}
+
+    &__nav {
+
+      ul {
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        a {
+          flex-direction: column;              
+        }
+      }
+    }
+
+		&__logo {
+			margin: 0 auto;
+		}
+	}
+}
